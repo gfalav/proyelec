@@ -1,0 +1,53 @@
+<h1>Listing proyectos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Proyecto</th>
+      <th>Desc</th>
+      <th>Comitente</th>
+      <th>Constructor</th>
+      <th>Proyectista</th>
+      <th>Fproyecto</th>
+      <th>Ubicacion</th>
+      <th>Expediente</th>
+      <th>Cond e</th>
+      <th>Cond g</th>
+      <th>Zona</th>
+      <th>Tconstr</th>
+      <th>Hlibre</th>
+      <th>Vanomax</th>
+      <th>Dretmax</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @proyectos.each do |proyecto| %>
+      <tr>
+        <td><%= proyecto.proyecto %></td>
+        <td><%= proyecto.desc %></td>
+        <td><%= proyecto.comitente %></td>
+        <td><%= proyecto.constructor %></td>
+        <td><%= proyecto.proyectista %></td>
+        <td><%= proyecto.fproyecto %></td>
+        <td><%= proyecto.ubicacion %></td>
+        <td><%= proyecto.expediente %></td>
+        <td><%= proyecto.cond_e_id %></td>
+        <td><%= proyecto.cond_g_id %></td>
+        <td><%= proyecto.zona_id %></td>
+        <td><%= proyecto.tconstr_id %></td>
+        <td><%= proyecto.hlibre %></td>
+        <td><%= proyecto.vanomax %></td>
+        <td><%= proyecto.dretmax %></td>
+        <td><%= link_to 'Show', proyecto %></td>
+        <td><%= link_to 'Edit', edit_proyecto_path(proyecto) %></td>
+        <td><%= link_to 'Destroy', proyecto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Proyecto', new_proyecto_path %>

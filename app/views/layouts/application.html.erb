@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Proyelec</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<div id="navbar">
+		<div id="logobar" >
+			<%= image_tag('CGSlogo.png',size: '100x45') %>
+		</div>
+		<div id="mainmenu">
+			<ul>
+				<li><%= link_to "PROYECTOS" %></li>
+				<li><%= link_to "PUNTOS" %></li>
+				<li><%= link_to "PIQUETES" %></li>
+				<li><%= link_to "VANOS" %></li>
+				<li><%= link_to "C M CONDS" %></li>
+			</ul>
+		</div>
+		<div id="usermenu">
+			<ul>
+				<li><%= link_to "USUARIOS" %></li>
+				<li><%= link_to "SETTINGS" %></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="main">
+		<%= yield %>
+	</div>
+
+</body>
+</html>

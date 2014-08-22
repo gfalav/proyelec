@@ -1,0 +1,73 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ page, body {
+ 	font-family: 'Open Sans Condensed', sans-serif;
+ }
+
+#navbar {
+	height: 43px;
+	border: 1px solid black;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+#navbar #logobar {
+	width: 18%;
+	padding-left: 10px;
+}
+
+#navbar #mainmenu {
+	width: 60%;	
+}
+
+#navbar #usermenu {
+	width: 20%;	
+}
+
+#navbar #logobar, #navbar #mainmenu, #navbar #usermenu {
+	float: left;
+}
+
+#navbar #mainmenu ul, #navbar #usermenu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#navbar #mainmenu ul li a, #navbar #usermenu ul li a {
+	text-decoration: none;
+	float: left;
+	margin-right: 5px;
+	color: #2586d7;
+	border: 1px solid #2586d7;
+	border-bottom: none;
+	padding: 10px;
+	width: 75px;
+	text-align: center;
+	display: block;
+	background: black;
+}
+
+#navbar #mainmenu ul li a:hover, #navbar #usermenu ul li a:hover {
+	background: white;
+	color: black;
+	text-shadow: 1px 1px 1px grey;
+}
+
+#main {
+	clear: both;
+}

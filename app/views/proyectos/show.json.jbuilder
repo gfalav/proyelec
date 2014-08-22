@@ -1,0 +1,1 @@
+json.extract! @proyecto, :id, :proyecto, :desc, :comitente, :constructor, :proyectista, :fproyecto, :ubicacion, :expediente, :cond_e_id, :cond_g_id, :zona_id, :tconstr_id, :hlibre, :vanomax, :dretmax, :created_at, :updated_at

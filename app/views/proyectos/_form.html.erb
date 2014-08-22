@@ -1,0 +1,77 @@
+<%= form_for(@proyecto) do |f| %>
+  <% if @proyecto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@proyecto.errors.count, "error") %> prohibited this proyecto from being saved:</h2>
+
+      <ul>
+      <% @proyecto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :proyecto %><br>
+    <%= f.text_field :proyecto %>
+  </div>
+  <div class="field">
+    <%= f.label :desc %><br>
+    <%= f.text_field :desc %>
+  </div>
+  <div class="field">
+    <%= f.label :comitente %><br>
+    <%= f.text_field :comitente %>
+  </div>
+  <div class="field">
+    <%= f.label :constructor %><br>
+    <%= f.text_field :constructor %>
+  </div>
+  <div class="field">
+    <%= f.label :proyectista %><br>
+    <%= f.text_field :proyectista %>
+  </div>
+  <div class="field">
+    <%= f.label :fproyecto %><br>
+    <%= f.date_select :fproyecto %>
+  </div>
+  <div class="field">
+    <%= f.label :ubicacion %><br>
+    <%= f.text_field :ubicacion %>
+  </div>
+  <div class="field">
+    <%= f.label :expediente %><br>
+    <%= f.text_field :expediente %>
+  </div>
+  <div class="field">
+    <%= f.label :cond_e_id %><br>
+    <%= f.number_field :cond_e_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cond_g_id %><br>
+    <%= f.number_field :cond_g_id %>
+  </div>
+  <div class="field">
+    <%= f.label :zona_id %><br>
+    <%= f.number_field :zona_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tconstr_id %><br>
+    <%= f.number_field :tconstr_id %>
+  </div>
+  <div class="field">
+    <%= f.label :hlibre %><br>
+    <%= f.text_field :hlibre %>
+  </div>
+  <div class="field">
+    <%= f.label :vanomax %><br>
+    <%= f.text_field :vanomax %>
+  </div>
+  <div class="field">
+    <%= f.label :dretmax %><br>
+    <%= f.text_field :dretmax %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
