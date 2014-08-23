@@ -34,9 +34,16 @@
 		<%= yield %>
 	</div>
 
-	<div id="endbar">
-		<%= image_tag('CGSpie.png') %>
-	</div>
+	<table id="endbar">
+		<td><%= image_tag('CGSlogo.png', size:'72x32') %></td>
+		<td>Compañía General de Servicios SRL</td>
+		<td><%= image_tag('home.png', size:'32x32') %></td>
+		<td>Los Zorzales 620 - Juana Koslay - San Luis</td>
+		<td><%= image_tag('mail.png', size:'32x32') %></td>
+		<td>G Falavigna: <%= mail_to('gfalav@hotmail.com') %> - J Pina: <%= mail_to('pinajoa@yahoo.com') %></td>
+		<td><%= image_tag('contact.png', size:'32x32') %></td>
+		<td>Falavigna: 0266 (15) 4512644 - Pina: 0266 (15) 4512645</td>
+	</table>
 
 </body>
 </html>
