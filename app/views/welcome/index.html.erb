@@ -1,6 +1,8 @@
 <table id="welctab">
 	<tr>
-		<td id="welcol1"><%= link_to "Click to Login", login_url %></td>
+		<% if session[:user_id]==nil %>
+			<td id="welcol1">Para ver los proyectos<br/> debe estar loggeado<br/><%= link_to "Click to Login", login_url %></td>
+		<% end %>
 		<td id="welcol2"><%= image_tag('powerlinesedited.jpg', size:"900x473") %></td>
 	</tr>
 </table>
