@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :condclimas
+
+  resources :zonas
+
+  resources :conductors
+
   get 'welcome/index'
 
 

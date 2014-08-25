@@ -16,7 +16,7 @@
     <%= f.text_field :proyecto %>
   </div>
   <div class="field">
-    <%= f.label :desc %><br>
+    <%= f.label :desc, 'Descripción' %><br>
     <%= f.text_field :desc %>
   </div>
   <div class="field">
@@ -32,11 +32,11 @@
     <%= f.text_field :proyectista %>
   </div>
   <div class="field">
-    <%= f.label :fproyecto %><br>
+    <%= f.label :fproyecto, 'Fecha del Proyecto' %><br>
     <%= f.date_select :fproyecto %>
   </div>
   <div class="field">
-    <%= f.label :ubicacion %><br>
+    <%= f.label :ubicacion, 'Ubicación' %><br>
     <%= f.text_field :ubicacion %>
   </div>
   <div class="field">
@@ -44,34 +44,34 @@
     <%= f.text_field :expediente %>
   </div>
   <div class="field">
-    <%= f.label :cond_e_id %><br>
-    <%= f.number_field :cond_e_id %>
+    <%= f.label :cond_e_id, 'Conductor de Energía' %><br>
+    <%= collection_select(:proyecto, :cond_e_id, @conductores, :id, :nombre) %>
   </div>
   <div class="field">
-    <%= f.label :cond_g_id %><br>
-    <%= f.number_field :cond_g_id %>
+    <%= f.label :cond_g_id, 'Conductor de Guardia' %><br>
+    <%= collection_select(:proyecto, :cond_g_id, @conductores, :id, :nombre) %>
   </div>
   <div class="field">
-    <%= f.label :zona_id %><br>
-    <%= f.number_field :zona_id %>
+    <%= f.label :zona_id, 'Zona' %><br>
+    <%= collection_select(:proyecto, :zona_id, @zonas, :id, :nombre) %>
   </div>
   <div class="field">
-    <%= f.label :tconstr_id %><br>
+    <%= f.label :tconstr_id, 'Tipo Constructivo' %><br>
     <%= f.number_field :tconstr_id %>
   </div>
   <div class="field">
-    <%= f.label :hlibre %><br>
+    <%= f.label :hlibre, 'Altura Libre' %><br>
     <%= f.text_field :hlibre %>
   </div>
   <div class="field">
-    <%= f.label :vanomax %><br>
+    <%= f.label :vanomax, 'Vano Máximo m' %><br>
     <%= f.text_field :vanomax %>
   </div>
   <div class="field">
-    <%= f.label :dretmax %><br>
+    <%= f.label :dretmax, 'Dist Max entre Retensiones' %><br>
     <%= f.text_field :dretmax %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Graba Proyecto" %>
   </div>
 <% end %>

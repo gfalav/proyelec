@@ -15,10 +15,14 @@ class ProyectosController < ApplicationController
   # GET /proyectos/new
   def new
     @proyecto = Proyecto.new
+    @conductores = Conductor.all
+    @zonas = Zona.all
   end
 
   # GET /proyectos/1/edit
   def edit
+    @conductores = Conductor.all
+    @zonas = Zona.all
   end
 
   # POST /proyectos

@@ -6,7 +6,7 @@
 </p>
 
 <p>
-  <strong>Desc:</strong>
+  <strong>Descripción del proyecto:</strong>
   <%= @proyecto.desc %>
 </p>
 
@@ -26,12 +26,12 @@
 </p>
 
 <p>
-  <strong>Fproyecto:</strong>
+  <strong>Fecha del proyecto:</strong>
   <%= @proyecto.fproyecto %>
 </p>
 
 <p>
-  <strong>Ubicacion:</strong>
+  <strong>Ubicación:</strong>
   <%= @proyecto.ubicacion %>
 </p>
 
@@ -41,39 +41,39 @@
 </p>
 
 <p>
-  <strong>Cond e:</strong>
-  <%= @proyecto.cond_e_id %>
+  <strong>Cond energía:</strong>
+  <%= @proyecto.cond_e.nombre %>
 </p>
 
 <p>
-  <strong>Cond g:</strong>
-  <%= @proyecto.cond_g_id %>
+  <strong>Conductor de guardia:</strong>
+  <%= @proyecto.cond_g.nombre %>
 </p>
 
 <p>
   <strong>Zona:</strong>
-  <%= @proyecto.zona_id %>
+  <%= @proyecto.zona.nombre %>
 </p>
 
 <p>
-  <strong>Tconstr:</strong>
+  <strong>Tipo constructivo:</strong>
   <%= @proyecto.tconstr_id %>
 </p>
 
 <p>
-  <strong>Hlibre:</strong>
+  <strong>Altura libre [m]:</strong>
   <%= @proyecto.hlibre %>
 </p>
 
 <p>
-  <strong>Vanomax:</strong>
+  <strong>Vano máximo [m]:</strong>
   <%= @proyecto.vanomax %>
 </p>
 
 <p>
-  <strong>Dretmax:</strong>
+  <strong>Dist máx entre retensiones [m]:</strong>
   <%= @proyecto.dretmax %>
 </p>
 
-<%= link_to 'Edit', edit_proyecto_path(@proyecto) %> |
-<%= link_to 'Back', proyectos_path %>
+<%= link_to 'Editar', edit_proyecto_path(@proyecto) %> |
+<%= link_to 'Volver', proyectos_path %>

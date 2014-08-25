@@ -1,3 +1,33 @@
 // Place all the styles related to the proyectos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#t_proyectos {
+	width: 100%;
+	border: 1px solid black;
+}
+
+#t_proyectos th {
+	color: #2586d7;
+	background-color: black;
+}
+
+#t_proyectos td {
+	color: black;
+	background-color: white;
+	border: 1px dotted black;
+}
+
+ .proy_t_cent {
+ 	text-align: center;
+ }
+
+ .field input, select {
+ 	width: 400px;
+ 	background-color: #3B5574;
+ 	color: white;
+ 	border: 1px solid black;
+ 	font-family: 'Open Sans Condensed', sans-serif;
+ 	font-size: 16px;
+ }
