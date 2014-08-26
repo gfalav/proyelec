@@ -40,40 +40,70 @@
   <%= @proyecto.expediente %>
 </p>
 
-<p>
-  <strong>Cond energía:</strong>
-  <%= @proyecto.cond_e.nombre %>
-</p>
+<div id='proymaslk'>
+  <strong>Mostrar mas</strong>
+</div>
+<div id='proyminlk'>
+  <strong>Mostrar menos</strong>
+</div>
 
-<p>
-  <strong>Conductor de guardia:</strong>
-  <%= @proyecto.cond_g.nombre %>
-</p>
+<div id="proymas">
+  <p>
+    <strong>Cond energía:</strong>
+    <%= @proyecto.cond_e.nombre %>
+  </p>
 
-<p>
-  <strong>Zona:</strong>
-  <%= @proyecto.zona.nombre %>
-</p>
+  <p>
+    <strong>Conductor de guardia:</strong>
+    <%= @proyecto.cond_g.nombre %>
+  </p>
 
-<p>
-  <strong>Tipo constructivo:</strong>
-  <%= @proyecto.tconstr_id %>
-</p>
+  <p>
+    <strong>Zona:</strong>
+    <%= @proyecto.zona.nombre %>
+  </p>
 
-<p>
-  <strong>Altura libre [m]:</strong>
-  <%= @proyecto.hlibre %>
-</p>
+  <p>
+    <strong>Tipo constructivo:</strong>
+    <%= @proyecto.tconstr_id %>
+  </p>
 
-<p>
-  <strong>Vano máximo [m]:</strong>
-  <%= @proyecto.vanomax %>
-</p>
+  <p>
+    <strong>Altura libre [m]:</strong>
+    <%= @proyecto.hlibre %>
+  </p>
 
-<p>
-  <strong>Dist máx entre retensiones [m]:</strong>
-  <%= @proyecto.dretmax %>
-</p>
+  <p>
+    <strong>Vano máximo [m]:</strong>
+    <%= @proyecto.vanomax %>
+  </p>
+
+  <p>
+    <strong>Dist máx entre retensiones [m]:</strong>
+    <%= @proyecto.dretmax %>
+  </p>
+</div>
 
 <%= link_to 'Editar', edit_proyecto_path(@proyecto) %> |
 <%= link_to 'Volver', proyectos_path %>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    
+    $("#proymas").hide();
+    $("#proymaslk").show();
+    $("#proyminlk").hide();
+
+    $("#proymaslk").click(function(){
+      $("#proymas").show();
+      $("#proyminlk").show();
+      $("#proymaslk").hide();
+    });
+
+    $("#proyminlk").click(function(){
+      $("#proymas").hide();
+      $("#proyminlk").hide();
+      $("#proymaslk").show();
+    });
+  });
+</script>

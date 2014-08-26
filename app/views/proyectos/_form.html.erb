@@ -33,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :fproyecto, 'Fecha del Proyecto' %><br>
-    <%= f.date_select :fproyecto %>
+    <%= f.text_field :fproyecto %>
   </div>
   <div class="field">
     <%= f.label :ubicacion, 'Ubicación' %><br>
@@ -75,3 +75,10 @@
     <%= f.submit "Graba Proyecto" %>
   </div>
 <% end %>
+
+
+<script>
+  $(function() {
+    $( "#proyecto_fproyecto" ).datepicker({ dateFormat: "yy-mm-dd" });
+  });
+  </script>
