@@ -12,6 +12,12 @@ class ApplicationController < ActionController::Base
   def authorize
   	if session[:user_id]== nil
   		redirect_to login_url, alert: 'Primero debe logearse'
+    else
+      user = User.find(session[:user_id])
+      if user.Usertype == "Administrador"
+      else
+        redirect_to login_url, alert: 'Usuario no autorizado'
+      end
   	end
   end
 end

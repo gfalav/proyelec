@@ -16,6 +16,11 @@
 </p>
 
 <p>
+  <strong>Email:</strong>
+  <%= @proyecto.email %>
+</p>
+
+<p>
   <strong>Constructor:</strong>
   <%= @proyecto.constructor %>
 </p>
@@ -85,7 +90,8 @@
 </div>
 
 <%= link_to 'Editar', edit_proyecto_path(@proyecto) %> |
-<%= link_to 'Volver', proyectos_path %>
+<%= link_to 'Volver', proyectos_path %> |
+<%= link_to 'Piquetes Especiales', puntos_path %>
 
 <script type="text/javascript">
   $(document).ready(function(){

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140825224133) do
+ActiveRecord::Schema.define(version: 20140910204558) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20140825224133) do
     t.decimal  "dretmax"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email"
   end
 
   create_table "users", force: true do |t|
@@ -68,6 +69,7 @@ ActiveRecord::Schema.define(version: 20140825224133) do
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "Usertype"
   end
 
   create_table "zonas", force: true do |t|
