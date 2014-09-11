@@ -1,0 +1,61 @@
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+<h1>Listing puntos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Punto</th>
+      <th>Proyecto</th>
+      <th>Secuencia</th>
+      <th>Latitud</th>
+      <th>Longitud</th>
+      <th>Distancia</th>
+      <th>Angulo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @puntos.each do |punto| %>
+      <tr>
+        <td><%= punto.punto %></td>
+        <td><%= punto.proyecto_id %></td>
+        <td><%= punto.secuencia %></td>
+        <td><%= punto.latitud %></td>
+        <td><%= punto.longitud %></td>
+        <td><%= punto.distancia %></td>
+        <td><%= punto.angulo %></td>
+        <td><%= link_to 'Show', punto %></td>
+        <td><%= link_to 'Edit', edit_punto_path(punto) %></td>
+        <td><%= link_to 'Destroy', punto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div id="map-canvas" style="width: 400px; height: 400px">heelo maps!!!</div>
+
+<%= link_to 'New Punto', new_punto_path %>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+<script>
+  var map;
+  
+  function initialize() {
+    var mapOptions = {
+      zoom: 12,
+      center: new google.maps.LatLng(-33.30, -66.33),
+      mapTypeId: google.maps.MapTypeId.HYBRID
+    };
+    map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :puntos
+
   resources :condclimas
 
   resources :zonas
